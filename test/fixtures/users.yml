@@ -4,6 +4,8 @@
 #
 #  id         :bigint(8)        not null, primary key
 #  name       :text
+#  email      :text
+#  admin      :boolean
 #  image      :text
 #  bio        :text
 #  location   :text

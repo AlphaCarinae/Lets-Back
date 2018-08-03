@@ -13,4 +13,9 @@
 #
 
 class Group < ApplicationRecord
+  has_many :roles
+  has_many :users, through: :roles
+
+  has_many :events
+  has_and_belongs_to_many :interests
 end

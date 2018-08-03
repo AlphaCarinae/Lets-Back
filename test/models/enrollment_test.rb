@@ -7,6 +7,8 @@
 #  waitinglist :boolean
 #  user_id     :integer
 #  event_id    :integer
+#  admin       :boolean
+#  moderator   :boolean
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #

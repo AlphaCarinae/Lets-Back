@@ -11,9 +11,13 @@
 #  date        :date
 #  photos      :text
 #  capacity    :integer
+#  group_id    :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
 
 class Event < ApplicationRecord
+  belongs_to :group
+  has_many :enrollments
+  has_many :users, through: :enrollments
 end
