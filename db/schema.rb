@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 2018_08_03_055903) do
   create_table "users", force: :cascade do |t|
     t.text "name"
     t.text "email"
-    t.boolean "admin"
+    t.boolean "admin", default: false
     t.text "image"
     t.text "bio"
     t.text "location"

@@ -30,6 +30,13 @@ Event.destroy_all
 e1 = Event.create :name => "Monday Crossdressing", :description => "Crossdressing on Mondays explained", :image => "", :location => "Kings Cross Sydney", :capacity => 20, :group_id => g1.id, :photos => "", :date => Date.current, :time => Time.now
 e2 = Event.create :name => "There is still hope", :description => "I used to have a 20 year old girlfriend", :image => "", :location => "Epping", :capacity => 5, :group_id => g2.id, :photos => "", :date => Date.current, :time => Time.now
 
+Role.destroy_all
+r1 = Role.create :user_id => u1.id, :group_id => g1.id, :admin => true
+r2 = Role.create :user_id => u2.id, :group_id => g1.id, :moderator => true
+r3 = Role.create :user_id => u3.id, :group_id => g1.id, :moderator => false, :admin => false
+r4 = Role.create :user_id => u3.id, :group_id => g2.id, :admin => true
+
 
 Enrollment.destroy_all
-en1 = Enrollment.create :status
+en1 = Enrollment.create  :user_id => u1.id, :event_id => e1.id,   :status => 1
+en2 = Enrollment.create  :user_id => u2.id, :event_id => e1.id,  :status => 1
