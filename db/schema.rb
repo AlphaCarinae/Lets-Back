@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_03_045439) do
+ActiveRecord::Schema.define(version: 2018_08_03_055903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2018_08_03_045439) do
     t.boolean "waitinglist"
     t.integer "user_id"
     t.integer "event_id"
+    t.boolean "admin"
+    t.boolean "moderator"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -33,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_08_03_045439) do
     t.date "date"
     t.text "photos"
     t.integer "capacity"
+    t.integer "group_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,11 +55,6 @@ ActiveRecord::Schema.define(version: 2018_08_03_045439) do
     t.bigint "interest_id", null: false
   end
 
-  create_table "groups_users", id: false, force: :cascade do |t|
-    t.bigint "group_id", null: false
-    t.bigint "user_id", null: false
-  end
-
   create_table "interests", force: :cascade do |t|
     t.text "name"
     t.datetime "created_at", null: false
@@ -68,8 +66,19 @@ ActiveRecord::Schema.define(version: 2018_08_03_045439) do
     t.bigint "user_id", null: false
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "group_id"
+    t.boolean "admin"
+    t.boolean "moderator"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.text "name"
+    t.text "email"
+    t.boolean "admin"
     t.text "image"
     t.text "bio"
     t.text "location"

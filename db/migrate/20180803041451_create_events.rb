@@ -9,6 +9,7 @@ class CreateEvents < ActiveRecord::Migration[5.2]
       t.date :date
       t.text :photos
       t.integer :capacity
+      t.integer :group_id
 
       t.timestamps
     end
