@@ -3,8 +3,8 @@ class CreateRoles < ActiveRecord::Migration[5.2]
     create_table :roles do |t|
       t.integer :user_id
       t.integer :group_id
-      t.boolean :admin
-      t.boolean :moderator
+      t.boolean :admin, default: false
+      t.boolean :moderator, default: false
 
       t.timestamps
     end
