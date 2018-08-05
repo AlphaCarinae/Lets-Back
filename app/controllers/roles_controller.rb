@@ -34,10 +34,13 @@ class RolesController < ApplicationController
     role.destroy
     redirect_to roles_path
   end
-end
 
+
+private
 
 def role_params
   params.require(:role).permit(:user_id,:group_id,:admin,:moderator)
+
+end
 
 end

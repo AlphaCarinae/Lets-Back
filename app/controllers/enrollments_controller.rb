@@ -36,10 +36,11 @@ class EnrollmentsController < ApplicationController
     enrollment.destroy
     redirect_to enrollments_path
   end
-end
 
+  private
 
-def enrollment_params
-  params.require(:enrollment).permit(:status, :waitinglist,:user_id,:event_id,:admin,:moderator)
+  def enrollment_params
+    params.require(:enrollment).permit(:status, :waitinglist,:user_id,:event_id,:admin,:moderator)
 
+  end
 end
