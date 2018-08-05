@@ -1,0 +1,9 @@
+<h1> <%= @interest.title %></h1>
+  <%= image_tag @interest.image, :alt =>@interest.name, :class => 'feature' %>
+
+<%= @interest.name %>
+
+<div class="controls">
+  <%= link_to 'Edit interest', edit_interest_path(@interest) %>
+  <%= link_to 'Delete interest', interest_path(@interest),:method => 'delete', :data => {:confirm => 'Are you sure ?'} %>
+</div>
