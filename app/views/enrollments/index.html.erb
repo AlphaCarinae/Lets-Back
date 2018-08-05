@@ -6,6 +6,7 @@
   <table>
     <thead>
       <tr>
+        <td>Enrollment_id</td>
         <td>User_id</td>
         <td>Event_id</td>
         <td>status</td>
@@ -19,6 +20,7 @@
     </thead>
     <% @enrollments.each do |e| %>
       <tr>
+        <td><%= e.id %></td>
         <td><%= e.user_id %></td>
         <td><%= e.event_id %></td>
         <td><%= e.status %></td>
