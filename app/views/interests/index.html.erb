@@ -1,3 +1,6 @@
 <h1>All interests</h1>
-<%= @interests.each do |interest| %>
+<% @interests.each do |interest| %>
+  <%= interest.id %>
+  <%= interest.name %>
+  <br>
 <% end %>
