@@ -12,4 +12,6 @@ json.events @events do |e|
 
   json.group e.group
 
+  json.users e.users
+
 end
