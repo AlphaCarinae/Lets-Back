@@ -1,6 +1,6 @@
 class InterestsController < ApplicationController
   def index
-    @interest = Interest.all
+    @interests = Interest.all
   end
 
   def show
@@ -17,7 +17,7 @@ class InterestsController < ApplicationController
 
   def update
     interest = Interest.find params[:id]
-    intere.update interest_params
+    interest.update interest_params
     redirect_to interest
   end
 
