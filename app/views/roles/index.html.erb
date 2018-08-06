@@ -6,6 +6,7 @@
   <table>
     <thead>
       <tr>
+        <td>Role_id</td>
         <td>User_id</td>
         <td>group_id</td>
 
@@ -18,6 +19,7 @@
     </thead>
     <% @roles.each do |e| %>
       <tr>
+        <td><%= e.id %></td>
         <td><%= e.user_id %></td>
         <td><%= e.group_id %></td>
 

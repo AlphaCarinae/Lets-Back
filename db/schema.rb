@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 2018_08_03_055903) do
 
   create_table "enrollments", force: :cascade do |t|
     t.integer "status"
+
+    #1= going , 
     t.boolean "waitinglist"
     t.integer "user_id"
     t.integer "event_id"
