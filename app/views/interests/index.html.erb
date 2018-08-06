@@ -1,4 +1,9 @@
 <h1>All interests</h1>
-<%= @interest.each do |interest| %>
-<%= link_to image_tag(interest.image, :class => 'thumb'), interest %>
+
+<% @interests.each do |interest| %>
+
+<ul>
+  <li><%= link_to  interest.name, interest%></li>
+</ul>
+
 <% end %>

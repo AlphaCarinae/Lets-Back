@@ -1,5 +1,6 @@
 
 
+
 json.groups @groups do |e|
   json.id e.id
   json.name e.name
@@ -13,5 +14,6 @@ json.groups @groups do |e|
   json.users e.users
 
   json.events e.events
+
 
 end

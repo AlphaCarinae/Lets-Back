@@ -9,7 +9,7 @@
   <%= f.text_field :bio %>
 
   <%= f.label :admin%>
-  <%= f.select(:admin, options_for_select([['True', true], ['False', false]], @users.admin))  %>
+  <%= f.select(:admin, options_for_select([['True', true], ['False', false]], @user.admin))  %>
 
   <%= f.label :location %>
   <%= f.text_field :location %>
