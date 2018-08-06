@@ -27,7 +27,7 @@ class InterestsController < ApplicationController
   end
 
   def destroy
-    interest -= Interest.find params[:id]
+    interest = Interest.find params[:id]
     interest.destroy
   end
   private
