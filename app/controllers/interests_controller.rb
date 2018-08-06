@@ -17,20 +17,30 @@ class InterestsController < ApplicationController
 
   def update
     interest = Interest.find params[:id]
-    interest.update interest_params
-    redirect_to interest
+  if interest.update (interest_params)
+    redirect_to interest_path
+  else
+    render :edit
   end
+end
 
   def create
-    interest = Interest.create
+    interest = Interest.create(interest_params)
+  if interest.save
     redirect_to interest
+  else
+    render :new
   end
+end
 
   def destroy
     interest = Interest.find params[:id]
     interest.destroy
+    redirect_to interest_path
   end
+
   private
+
   def interest_params
     params.require(:interest).permit(:name)
   end
