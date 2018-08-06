@@ -1,3 +1,3 @@
-json.groups @groups do |e|
-  json.name e.name
+json.groups @groups do |group|
+  json.name group.name
 end
