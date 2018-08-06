@@ -10,7 +10,7 @@
 # The event that owns this enrollment
   json.event enrollment.event
 
-# The user thatnowns this enrollment
+# The user that owns this enrollment
   json.user enrollment.user
 
 

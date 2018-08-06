@@ -12,6 +12,15 @@
 <h5>Location:<%= @group.location %></h5>
 <h5>Nickname:<%= @group.nickname %></h5>
 
+<h4>Events:</h4>
+<ul>
+<% @group.events.each do |x| %>
+<li>
+<%= x.name %>
+</li>
+<% end %>
+</ul>
+
 
 <%= link_to 'Edit', edit_group_path(@group) %>
 <%= link_to 'Delete', group_path(@group), method: :delete, data: {confirm: "Are you sure?"}%>
