@@ -1,4 +1,4 @@
-json.interests @interests do |interests|
+json.interests @interests do |interest|
 
   json.name interest.name
 
