@@ -1,5 +1,4 @@
-json.events @events do |e|
-  json.id e.id 
+e = @event
   json.name e.name
   json.description e.description
   json.image e.image
@@ -14,5 +13,3 @@ json.events @events do |e|
   json.group e.group
 
   json.users e.users
-
-end
