@@ -1,22 +1,19 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
-    @groups = Group.all
+
   end
 
   def show
     @event = Event.find params[:id]
-    @groups = Group.all
   end
 
   def edit
     @event = Event.find params[:id]
-    @groups = Group.all.map { |e| [e.name, e.id]  }
   end
 
   def new
     @event = Event.new
-    @groups = Group.all.map { |e| [e.name, e.id]  }
   end
 
   def create
