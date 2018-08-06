@@ -10,15 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_03_055903) do
+ActiveRecord::Schema.define(version: 2018_08_06_082920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "enrollments", force: :cascade do |t|
     t.integer "status"
-
-    #1= going , 
     t.boolean "waitinglist"
     t.integer "user_id"
     t.integer "event_id"
@@ -80,12 +78,13 @@ ActiveRecord::Schema.define(version: 2018_08_03_055903) do
   create_table "users", force: :cascade do |t|
     t.text "name"
     t.text "email"
-    t.boolean "admin"
+    t.boolean "admin", default: false
     t.text "image"
     t.text "bio"
     t.text "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "password"
   end
 
 end

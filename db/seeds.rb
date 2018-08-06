@@ -13,10 +13,10 @@ g2 = Group.create :name => "Dating in your 50's", :description => "if you're sti
 
 
 User.destroy_all
-u1 = User.create :name => "Soheil", :image => "", :bio => "i have made it this far", :location => "Sydney"
-u2 = User.create :name => "Tom'o", :image => "", :bio => "I watch videos alone", :location => "The Shire"
-u3 = User.create :name => "Will'o", :image => "", :bio => "I know about colors", :location => "le Paris"
-u4 = User.create :name => "Kourosh", :image => "", :bio => "I know what you did in rails", :location => "Glebe"
+u1 = User.create :name => "Soheil", :image => "", :bio => "i have made it this far", :location => "Sydney", :password => "test"
+u2 = User.create :name => "Tom'o", :image => "", :bio => "I watch videos alone", :location => "The Shire", :password => "test"
+u3 = User.create :name => "Will'o", :image => "", :bio => "I know about colors", :location => "le Paris", :password => "test"
+u4 = User.create :name => "Kourosh", :image => "", :bio => "I know what you did in rails", :location => "Glebe", :password => "test"
 
 
 Interest.destroy_all
