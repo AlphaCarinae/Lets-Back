@@ -5,12 +5,11 @@ class GroupsController < ApplicationController
 
   def show
     @group = Group.find params[:id]
-    @events = Event.all
+
   end
 
   def new
     @group = Group.new
-    @interests = Interest.all.map { |e| [e.name, e.id]  }
   end
 
   def edit
