@@ -1,8 +1,8 @@
-json.interests @interests do |interests|
+json.interests @interests do |interest|
 
   json.name interest.name
 
-  json.users @users do |user|
+  json.users interest.users do |user|
 
     json.name user.name
     json.email user.email
@@ -11,7 +11,7 @@ json.interests @interests do |interests|
     json.location user.location
     json.image user.image
 
-    json.groups @groups do |group|
+    json.groups interest.groups do |group|
       json.name group.name
     end
   end
