@@ -1,6 +1,6 @@
 class InterestsController < ApplicationController
   def index
-    @interest = Interest.all
+    @interests = Interest.all
   end
 
   def show
