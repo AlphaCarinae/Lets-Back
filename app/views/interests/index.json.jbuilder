@@ -1,18 +1,8 @@
 json.interests @interests do |interest|
-
+  json.id interest.id
   json.name interest.name
+  json.created_at interest.created_at
+  json.updated_at interest.updated_at
 
-  json.users interest.users do |user|
 
-    json.name user.name
-    json.email user.email
-    json.bio user.bio
-    json.admin user.admin
-    json.location user.location
-    json.image user.image
-
-    json.groups interest.groups do |group|
-      json.name group.name
-    end
-  end
 end

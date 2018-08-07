@@ -19,9 +19,17 @@ class GroupsController < ApplicationController
 
   def update
   @group = Group.find params[:id]
-  @group.update group_params
+  # @group.interest_ids << params[:interest_ids]
   if @group.update(group_params)
-    redirect_to group_path(@group)
+    @group.interest_ids = []
+    params[:interest_ids].each do |id|
+      interest = Interest.find id
+      @group.interests << interest
+      p "adding interest: #{ id } #{ interest.name }"
+      p "~" * 40
+    end
+    #redirect_to group_path(@group)
+    render :json => @group
   else
     render 'edit'
   end
@@ -38,9 +46,9 @@ def create
 end
 
 def destroy
-  @griuo = Group.find params[:id]
-  @griuo.destroy
-  redirect_to 'groups#index'
+  @group = Group.find params[:id]
+  @group.destroy
+  redirect_to groups_path
 end
 
 
@@ -50,9 +58,7 @@ end
 
   private
   def group_params
-    params.require(:group).permit(:name, :description, :location,  :image, :nickname)
+    params.require(:group).permit(:id, :name, :description, :location,  :image, :nickname, :interest_ids => [] )
   end
-def find_book
-@book = Book.find(params[:id])
-end
+
 end
