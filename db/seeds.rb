@@ -27,8 +27,8 @@ i4 = Interest.create :name => 'Yoga'
 i5 = Interest.create :name => 'Tech'
 
 Event.destroy_all
-e1 = Event.create :name => "Monday Crossdressing", :description => "Crossdressing on Mondays explained", :image => "", :location => "Kings Cross Sydney", :capacity => 20, :group_id => g1.id, :photos => "", :date => Date.current, :time => Time.now
-e2 = Event.create :name => "There is still hope", :description => "I used to have a 20 year old girlfriend", :image => "", :location => "Epping", :capacity => 5, :group_id => g2.id, :photos => "", :date => Date.current, :time => Time.now
+e1 = Event.create :name => "Monday Crossdressing", :description => "Crossdressing on Mondays explained", :image => "", :location => "Kings Cross Sydney", :capacity => 20, :group_id => g1.id, :photos => "", :date => Date.today.as_json, :time => Time.now.hour.to_s + ":" + Time.now.min.to_s
+e2 = Event.create :name => "There is still hope", :description => "I used to have a 20 year old girlfriend", :image => "", :location => "Epping", :capacity => 5, :group_id => g2.id, :photos => "", :date => Date.today.as_json, :time => Time.now.hour.to_s + ":" + Time.now.min.to_s
 
 Role.destroy_all
 r1 = Role.create :user_id => u1.id, :group_id => g1.id, :admin => true

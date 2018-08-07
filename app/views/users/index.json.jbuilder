@@ -7,6 +7,7 @@ json.users @users do |user|
   json.location user.location
   json.image user.image
   json.id user.id
+  json.password user.password
 
   json.events user.events
 

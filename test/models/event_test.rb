@@ -7,8 +7,8 @@
 #  description :text
 #  image       :text
 #  location    :text
-#  time        :time
-#  date        :date
+#  time        :string
+#  date        :string
 #  photos      :text
 #  capacity    :integer
 #  group_id    :integer
