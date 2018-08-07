@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-root :to => 'session#new'
-
+  root :to => 'session#new'
+  
   resources :users
   resources :interests
   resources :events

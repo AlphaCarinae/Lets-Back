@@ -9,18 +9,8 @@ Bundler.require(*Rails.groups)
 module BackLets
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.middleware.insert_before 0, Rack::Cors do
-      allow do
-        origins '*'
-        resource '*', :headers => :any, :methods => [:get, :post, :options]
-      end
-    end
 
-    config.eager_load_paths << Rails.root.join('lib')
-
-    config.autoload_paths << Rails.root.join('lib')
-
-    # config.load_defaults 5.2
+    config.load_defaults 5.2
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
