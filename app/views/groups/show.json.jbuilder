@@ -9,5 +9,6 @@ json.created_at g.created_at
 json.updated_at g.updated_at
 
 
-json.events @group.events
-json.users @group.users
+json.events g.events
+json.users g.users
+json.interests g.interests
