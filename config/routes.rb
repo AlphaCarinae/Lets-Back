@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  root :to => 'session#new'
-  
+
+  post 'user_token' => 'user_token#create'
+  # root :to => 'session#new'
+
+
   resources :users
   resources :interests
   resources :events
@@ -9,7 +12,11 @@ Rails.application.routes.draw do
   resources :enrollments
   resources :roles
 
-  get '/login' => 'session#new'
-  post '/login' => 'session#create'
-  delete '/login' => 'session#destroy'
+
+
+  # post 'user_token' => 'user_token#create'
+
+
+
+
 end

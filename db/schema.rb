@@ -69,8 +69,8 @@ ActiveRecord::Schema.define(version: 2018_08_07_055543) do
   create_table "roles", force: :cascade do |t|
     t.integer "user_id"
     t.integer "group_id"
-    t.boolean "admin"
-    t.boolean "moderator"
+    t.boolean "admin", default: false
+    t.boolean "moderator", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -84,7 +84,6 @@ ActiveRecord::Schema.define(version: 2018_08_07_055543) do
     t.text "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "password"
     t.string "password_digest"
   end
 
