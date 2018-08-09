@@ -19,5 +19,6 @@
 class Event < ApplicationRecord
   belongs_to :group
   has_many :enrollments
+  has_many :comments
   has_many :users, through: :enrollments
 end

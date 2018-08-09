@@ -20,6 +20,7 @@ class User < ApplicationRecord
   has_secure_password
 
   has_many :roles
+  has_many :comments
   has_many :groups, through: :roles
 
   has_many :enrollments
