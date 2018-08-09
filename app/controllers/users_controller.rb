@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
 
-before_action :authenticate_user, except: [:index, :show], :raise => false
 
   def index
     @users = User.all
