@@ -24,7 +24,14 @@ i1 = Interest.create :name => 'crosssing dresses'
 i2 = Interest.create :name => 'outdoors'
 i3 = Interest.create :name => 'sports'
 i4 = Interest.create :name => 'Yoga'
-i5 = Interest.create :name => 'Tech'
+i5 = Interest.create :name => 'Food'
+i6 = Interest.create :name => 'Family'
+i7 = Interest.create :name => 'Learning'
+i8 = Interest.create :name => 'Health'
+i9 = Interest.create :name => 'Photography'
+i10 = Interest.create :name => 'Music'
+i11 = Interest.create :name => 'Language'
+i12 = Interest.create :name => 'Tech'
 
 Event.destroy_all
 e1 = Event.create :name => "Monday Crossdressing", :description => "Crossdressing on Mondays explained", :image => "", :location => "Kings Cross Sydney", :capacity => 20, :group_id => g1.id, :photos => "", :date => Date.today.as_json, :time => Time.now.hour.to_s + ":" + Time.now.min.to_s
