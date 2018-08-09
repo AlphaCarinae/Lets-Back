@@ -12,3 +12,4 @@ json.updated_at g.updated_at
 json.events g.events
 json.users g.users
 json.interests g.interests
+json.roles g.roles
