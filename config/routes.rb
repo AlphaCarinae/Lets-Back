@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :enrollments
   resources :roles
-
+  resources :comments
 
 
   # post 'user_token' => 'user_token#create'

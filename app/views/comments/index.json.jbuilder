@@ -1,7 +1,5 @@
 
 
-c = @comment
-
 json.comments @comments do |c|
 
   json.id c.id

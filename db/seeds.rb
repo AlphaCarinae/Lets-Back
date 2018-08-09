@@ -40,3 +40,8 @@ r4 = Role.create :user_id => u3.id, :group_id => g2.id, :admin => true
 Enrollment.destroy_all
 en1 = Enrollment.create  :user_id => u1.id, :event_id => e1.id,   :status => 1
 en2 = Enrollment.create  :user_id => u2.id, :event_id => e1.id,  :status => 1
+
+
+Comment.destroy_all
+c1 = Comment.create :user_id => u1.id, :event_id => e1.id, :content => "first comment"
+c2 = Comment.create :user_id => u2.id, :event_id => e1.id, :content => "first comment"
