@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
 
-  skip_before_action :authenticate_user, only: [:index, :show], :raise => false
+  before_action :authenticate_user, except: [:index, :show], :raise => false
 
   def index
     @groups = Group.all
