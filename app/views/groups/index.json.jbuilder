@@ -9,6 +9,8 @@ json.groups @groups do |e|
   json.image e.image
   json.nickname e.nickname
 
+  json.roles e.roles
+
   json.interests e.interests
 
   json.users e.users
