@@ -1,4 +1,5 @@
 e = @event
+  json.id e.id
   json.name e.name
   json.description e.description
   json.image e.image
