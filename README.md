@@ -1,24 +1,24 @@
-# README
+# Lets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## About
+Lets is meant to be a Meetup.com clone for practicing purposes. users can create groups and events within those groups for activites.
 
-Things you may want to cover:
+## Functionality
+This is the Rails part of the project acting as the backend
 
-* Ruby version
 
-* System dependencies
+## Technology
 
-* Configuration
+Lets is using Ruby on Rails as backend and React as the front-end
 
-* Database creation
+## Structure
 
-* Database initialization
+There are seven models in the database:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  - Users
+  - Groups
+  - Events
+  - Roles (joint Model between Users and Groups)
+  - Enrollments (joint Model between Users and Events)
+  - Interests
+  - Comments
