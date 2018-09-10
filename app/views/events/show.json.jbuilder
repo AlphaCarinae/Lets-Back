@@ -14,3 +14,5 @@ e = @event
   json.group e.group
 
   json.users e.users
+
+  json.enrollments e.enrollments
