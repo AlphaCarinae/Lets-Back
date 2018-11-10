@@ -3,9 +3,10 @@
 ## About
 Lets is meant to be a Meetup.com clone for practicing purposes. users can create groups and events within those groups for activities, join them and comment on them.
 
+Hollywood was done as Project 2 (9 weeks in), in General Assembly's 12 week Web Dev Immersive full time program.
+
 ## Functionality
 This is the Rails part of the project acting as the backend.
-
 
 ## Technology
 
